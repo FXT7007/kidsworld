@@ -1,0 +1,21 @@
+{
+  "name": "KidsWorld — Learn & Play",
+  "short_name": "KidsWorld",
+  "description": "Learn ABC, 123, Colors, Animals, Shapes & Songs! For kids aged 2-7.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#7C3AED",
+  "theme_color": "#7C3AED",
+  "lang": "en",
+  "categories": ["education", "kids", "entertainment"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    { "src": "screenshot1.png", "sizes": "1080x1920", "type": "image/png", "label": "ABC Learning Screen" },
+    { "src": "screenshot2.png", "sizes": "1080x1920", "type": "image/png", "label": "Animals Screen" }
+  ],
+  "prefer_related_applications": false
+}
