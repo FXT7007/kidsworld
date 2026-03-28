@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/nisar/Downloads/kidsworld_fixed_paths_1.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#7C3AED">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="KidsWorld">
 <meta name="description" content="KidsWorld - Learn ABC, 123, Colors, Animals, Shapes and Songs! For kids aged 2-7.">
-<link rel="manifest" href="file:///C:/Users/nisar/Downloads/manifest.json">
+<link rel="manifest" href="manifest.json">
 <title>KidsWorld Learn and Play</title>
-<link href="./index_files/css2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
 :root{
   --p1:#7C3AED;--p2:#A855F7;--p3:#DDD6FE;
@@ -265,7 +265,12 @@ body{font-family:'Baloo 2',cursive;color:var(--txt);}
 </head>
 <body>
 
-
+<div id="splash">
+  <div class="sp-c">🐻</div>
+  <div class="sp-logo">🌈 KidsWorld</div>
+  <div class="sp-sub">Learn &bull; Play &bull; Grow</div>
+  <div class="sp-bar"><div class="sp-fill"></div></div>
+</div>
 
 <div id="lvlModal">
   <div class="lvl-box">
@@ -280,7 +285,7 @@ body{font-family:'Baloo 2',cursive;color:var(--txt);}
 <div class="bgc">
   <div class="orb o1"></div><div class="orb o2"></div>
   <div class="orb o3"></div><div class="orb o4"></div>
-  <div id="bgS"><div class="fbg" style="font-size: 26.6356px; left: 7.43772%; animation-duration: 28.9806s; animation-delay: 4.51495s;">⭐</div><div class="fbg" style="font-size: 39.1161px; left: 44.9133%; animation-duration: 30.7036s; animation-delay: 14.4424s;">🔵</div><div class="fbg" style="font-size: 36.8855px; left: 25.2535%; animation-duration: 21.5913s; animation-delay: 7.58624s;">💛</div><div class="fbg" style="font-size: 28.4261px; left: 69.1017%; animation-duration: 18.9856s; animation-delay: 6.64928s;">💚</div><div class="fbg" style="font-size: 44.7554px; left: 33.9641%; animation-duration: 17.4022s; animation-delay: 15.8685s;">🟣</div><div class="fbg" style="font-size: 45.7125px; left: 44.2694%; animation-duration: 25.3387s; animation-delay: 12.1503s;">🟠</div><div class="fbg" style="font-size: 37.1544px; left: 59.008%; animation-duration: 23.3877s; animation-delay: 14.9174s;">❤️</div><div class="fbg" style="font-size: 42.8394px; left: 37.2891%; animation-duration: 29.5567s; animation-delay: 8.24481s;">💜</div></div>
+  <div id="bgS"></div>
 </div>
 
 <div id="app">
@@ -288,7 +293,7 @@ body{font-family:'Baloo 2',cursive;color:var(--txt);}
     <div class="hdr-logo">🌈 KidsWorld</div>
     <div class="hdr-r">
       <div class="pill p-fire">🔥&nbsp;<span id="strkN">1</span></div>
-      <div class="pill p-day" onclick="goTab(&#39;plan&#39;,7)">📅 Day&nbsp;<span id="dayN">1</span></div>
+      <div class="pill p-day" onclick="goTab('plan',7)">📅 Day&nbsp;<span id="dayN">1</span></div>
     </div>
   </div>
   <div class="xp-r">
@@ -303,137 +308,139 @@ body{font-family:'Baloo 2',cursive;color:var(--txt);}
       <!-- ░░ LUNA — ANIMATED SVG CHARACTER ░░ -->
       <svg id="cSvg" viewBox="0 0 100 170" xmlns="http://www.w3.org/2000/svg" onclick="tapLuna()">
         <defs>
-          <radialgradient id="gB" cx="44%" cy="33%" r="60%">
-            <stop id="gB0" offset="0%" stop-color="#FDE68A"></stop>
-            <stop id="gB1" offset="100%" stop-color="#F59E0B"></stop>
-          </radialgradient>
-          <radialgradient id="gH" cx="42%" cy="30%" r="58%">
-            <stop id="gH0" offset="0%" stop-color="#FEF3C7"></stop>
-            <stop id="gH1" offset="100%" stop-color="#FCD34D"></stop>
-          </radialgradient>
-          <radialgradient id="gBl" cx="50%" cy="50%" r="50%">
-            <stop id="gBl0" offset="0%" stop-color="#FFFBEB"></stop>
-            <stop id="gBl1" offset="100%" stop-color="#FDE68A"></stop>
-          </radialgradient>
-          <radialgradient id="gEy" cx="38%" cy="30%" r="62%">
-            <stop offset="0%" stop-color="#1D4ED8"></stop>
-            <stop offset="100%" stop-color="#1E3A8A"></stop>
-          </radialgradient>
-          <filter id="fSh"><fedropshadow dx="1" dy="4" stdDeviation="3.5" flood-color="rgba(124,58,237,.2)"></fedropshadow></filter>
+          <radialGradient id="gB" cx="44%" cy="33%" r="60%">
+            <stop id="gB0" offset="0%" stop-color="#FDE68A"/>
+            <stop id="gB1" offset="100%" stop-color="#F59E0B"/>
+          </radialGradient>
+          <radialGradient id="gH" cx="42%" cy="30%" r="58%">
+            <stop id="gH0" offset="0%" stop-color="#FEF3C7"/>
+            <stop id="gH1" offset="100%" stop-color="#FCD34D"/>
+          </radialGradient>
+          <radialGradient id="gBl" cx="50%" cy="50%" r="50%">
+            <stop id="gBl0" offset="0%" stop-color="#FFFBEB"/>
+            <stop id="gBl1" offset="100%" stop-color="#FDE68A"/>
+          </radialGradient>
+          <radialGradient id="gEy" cx="38%" cy="30%" r="62%">
+            <stop offset="0%" stop-color="#1D4ED8"/>
+            <stop offset="100%" stop-color="#1E3A8A"/>
+          </radialGradient>
+          <filter id="fSh"><feDropShadow dx="1" dy="4" stdDeviation="3.5" flood-color="rgba(124,58,237,.2)"/></filter>
         </defs>
-        <circle id="cGlow" cx="50" cy="86" r="50" fill="none" stroke="#FCD34D" stroke-width="5" opacity="0"></circle>
+        <circle id="cGlow" cx="50" cy="86" r="50" fill="none" stroke="#FCD34D" stroke-width="5" opacity="0"/>
         <!-- LEGS -->
-        <g id="cll"><ellipse cx="36" cy="151" rx="9" ry="11" id="leg1a" fill="#F59E0B"></ellipse><ellipse cx="34" cy="160" rx="9" ry="5" id="leg1b" fill="#D97706"></ellipse></g>
-        <g id="clr"><ellipse cx="64" cy="151" rx="9" ry="11" id="leg2a" fill="#F59E0B"></ellipse><ellipse cx="66" cy="160" rx="9" ry="5" id="leg2b" fill="#D97706"></ellipse></g>
+        <g id="cll"><ellipse cx="36" cy="151" rx="9" ry="11" id="leg1a" fill="#F59E0B"/><ellipse cx="34" cy="160" rx="9" ry="5" id="leg1b" fill="#D97706"/></g>
+        <g id="clr"><ellipse cx="64" cy="151" rx="9" ry="11" id="leg2a" fill="#F59E0B"/><ellipse cx="66" cy="160" rx="9" ry="5" id="leg2b" fill="#D97706"/></g>
         <!-- BODY -->
         <g id="cb" filter="url(#fSh)">
-          <ellipse cx="50" cy="113" rx="25" ry="30" fill="url(#gB)"></ellipse>
-          <ellipse cx="50" cy="115" rx="15" ry="19" fill="url(#gBl)" opacity=".76"></ellipse>
-          <ellipse cx="50" cy="97" rx="23" ry="9" id="shirt" fill="#7C3AED" opacity=".62"></ellipse>
-          <rect x="27" y="97" width="46" height="5" rx="2.5" id="shirtD" fill="#6D28D9" opacity=".48"></rect>
+          <ellipse cx="50" cy="113" rx="25" ry="30" fill="url(#gB)"/>
+          <ellipse cx="50" cy="115" rx="15" ry="19" fill="url(#gBl)" opacity=".76"/>
+          <ellipse cx="50" cy="97" rx="23" ry="9" id="shirt" fill="#7C3AED" opacity=".62"/>
+          <rect x="27" y="97" width="46" height="5" rx="2.5" id="shirtD" fill="#6D28D9" opacity=".48"/>
           <text x="50" y="116" font-size="13" text-anchor="middle" fill="white" opacity=".82">⭐</text>
           <!-- ARMS -->
           <g id="cal">
-            <ellipse cx="23" cy="102" rx="8" ry="13" id="armL" fill="#FCD34D" transform="rotate(-18,23,102)"></ellipse>
-            <circle cx="16" cy="113" r="7" id="handL" fill="#FDE68A"></circle>
-            <circle cx="12" cy="109" r="3" id="fL1" fill="#FCD34D"></circle>
-            <circle cx="11" cy="115" r="2.8" id="fL2" fill="#FCD34D"></circle>
-            <circle cx="19" cy="118" r="2.8" id="fL3" fill="#FCD34D"></circle>
+            <ellipse cx="23" cy="102" rx="8" ry="13" id="armL" fill="#FCD34D" transform="rotate(-18,23,102)"/>
+            <circle cx="16" cy="113" r="7" id="handL" fill="#FDE68A"/>
+            <circle cx="12" cy="109" r="3" id="fL1" fill="#FCD34D"/>
+            <circle cx="11" cy="115" r="2.8" id="fL2" fill="#FCD34D"/>
+            <circle cx="19" cy="118" r="2.8" id="fL3" fill="#FCD34D"/>
           </g>
           <g id="car">
-            <ellipse cx="77" cy="102" rx="8" ry="13" id="armR" fill="#FCD34D" transform="rotate(18,77,102)"></ellipse>
-            <circle cx="84" cy="113" r="7" id="handR" fill="#FDE68A"></circle>
-            <circle cx="88" cy="109" r="3" id="fR1" fill="#FCD34D"></circle>
-            <circle cx="89" cy="115" r="2.8" id="fR2" fill="#FCD34D"></circle>
-            <circle cx="81" cy="118" r="2.8" id="fR3" fill="#FCD34D"></circle>
+            <ellipse cx="77" cy="102" rx="8" ry="13" id="armR" fill="#FCD34D" transform="rotate(18,77,102)"/>
+            <circle cx="84" cy="113" r="7" id="handR" fill="#FDE68A"/>
+            <circle cx="88" cy="109" r="3" id="fR1" fill="#FCD34D"/>
+            <circle cx="89" cy="115" r="2.8" id="fR2" fill="#FCD34D"/>
+            <circle cx="81" cy="118" r="2.8" id="fR3" fill="#FCD34D"/>
           </g>
           <!-- HEAD -->
           <g id="ch">
-            <ellipse cx="50" cy="68" rx="27" ry="26" fill="url(#gH)"></ellipse>
-            <ellipse cx="25" cy="58" rx="8" ry="9.5" id="earL" fill="#FCD34D"></ellipse>
-            <ellipse cx="25" cy="58" rx="4.5" ry="5.5" id="earLi" fill="#F59E0B" opacity=".55"></ellipse>
-            <ellipse cx="75" cy="58" rx="8" ry="9.5" id="earR" fill="#FCD34D"></ellipse>
-            <ellipse cx="75" cy="58" rx="4.5" ry="5.5" id="earRi" fill="#F59E0B" opacity=".55"></ellipse>
-            <circle cx="36" cy="43" r="7.5" id="hair1" fill="#D97706"></circle>
-            <circle cx="50" cy="39" r="8.5" id="hair2" fill="#F59E0B"></circle>
-            <circle cx="64" cy="43" r="7.5" id="hair3" fill="#D97706"></circle>
+            <ellipse cx="50" cy="68" rx="27" ry="26" fill="url(#gH)"/>
+            <ellipse cx="25" cy="58" rx="8" ry="9.5" id="earL" fill="#FCD34D"/>
+            <ellipse cx="25" cy="58" rx="4.5" ry="5.5" id="earLi" fill="#F59E0B" opacity=".55"/>
+            <ellipse cx="75" cy="58" rx="8" ry="9.5" id="earR" fill="#FCD34D"/>
+            <ellipse cx="75" cy="58" rx="4.5" ry="5.5" id="earRi" fill="#F59E0B" opacity=".55"/>
+            <circle cx="36" cy="43" r="7.5" id="hair1" fill="#D97706"/>
+            <circle cx="50" cy="39" r="8.5" id="hair2" fill="#F59E0B"/>
+            <circle cx="64" cy="43" r="7.5" id="hair3" fill="#D97706"/>
             <!-- LEFT EYE -->
             <g id="el" style="transform-origin:37px 68px">
-              <ellipse cx="37" cy="68" rx="8.5" ry="9.5" fill="white"></ellipse>
-              <circle cx="37" cy="70" r="5.5" fill="url(#gEy)"></circle>
-              <circle cx="37" cy="70" r="3" fill="#0F172A"></circle>
-              <circle cx="39.5" cy="67" r="2" fill="white"></circle>
-              <circle cx="35" cy="72" r="1.1" fill="white" opacity=".65"></circle>
-              <line x1="29" y1="60" x2="27" y2="56" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"></line>
-              <line x1="34" y1="58" x2="33" y2="54" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"></line>
-              <line x1="40" y1="59" x2="40" y2="55" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"></line>
+              <ellipse cx="37" cy="68" rx="8.5" ry="9.5" fill="white"/>
+              <circle cx="37" cy="70" r="5.5" fill="url(#gEy)"/>
+              <circle cx="37" cy="70" r="3" fill="#0F172A"/>
+              <circle cx="39.5" cy="67" r="2" fill="white"/>
+              <circle cx="35" cy="72" r="1.1" fill="white" opacity=".65"/>
+              <line x1="29" y1="60" x2="27" y2="56" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="34" y1="58" x2="33" y2="54" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="40" y1="59" x2="40" y2="55" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"/>
             </g>
             <!-- RIGHT EYE -->
             <g id="er" style="transform-origin:63px 68px">
-              <ellipse cx="63" cy="68" rx="8.5" ry="9.5" fill="white"></ellipse>
-              <circle cx="63" cy="70" r="5.5" fill="url(#gEy)"></circle>
-              <circle cx="63" cy="70" r="3" fill="#0F172A"></circle>
-              <circle cx="65.5" cy="67" r="2" fill="white"></circle>
-              <circle cx="61" cy="72" r="1.1" fill="white" opacity=".65"></circle>
-              <line x1="56" y1="60" x2="54" y2="56" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"></line>
-              <line x1="61" y1="58" x2="60" y2="54" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"></line>
-              <line x1="67" y1="59" x2="67" y2="55" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"></line>
+              <ellipse cx="63" cy="68" rx="8.5" ry="9.5" fill="white"/>
+              <circle cx="63" cy="70" r="5.5" fill="url(#gEy)"/>
+              <circle cx="63" cy="70" r="3" fill="#0F172A"/>
+              <circle cx="65.5" cy="67" r="2" fill="white"/>
+              <circle cx="61" cy="72" r="1.1" fill="white" opacity=".65"/>
+              <line x1="56" y1="60" x2="54" y2="56" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="61" y1="58" x2="60" y2="54" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="67" y1="59" x2="67" y2="55" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"/>
             </g>
-            <ellipse cx="50" cy="78" rx="4" ry="3" fill="#D97706" opacity=".62"></ellipse>
-            <circle cx="48.2" cy="79.2" r="1.3" fill="#92400E" opacity=".5"></circle>
-            <circle cx="51.8" cy="79.2" r="1.3" fill="#92400E" opacity=".5"></circle>
-            <path d="M41 85 Q50 95 59 85" stroke="#D97706" stroke-width="2.8" fill="none" stroke-linecap="round"></path>
-            <path d="M43 86.5 Q50 92 57 86.5" fill="white" opacity=".88"></path>
-            <ellipse cx="50" cy="91.5" rx="4" ry="2.5" fill="#FCA5A5" opacity=".75"></ellipse>
-            <ellipse cx="26" cy="77" rx="6" ry="4" fill="#FB923C" opacity=".28"></ellipse>
-            <ellipse cx="74" cy="77" rx="6" ry="4" fill="#FB923C" opacity=".28"></ellipse>
+            <ellipse cx="50" cy="78" rx="4" ry="3" fill="#D97706" opacity=".62"/>
+            <circle cx="48.2" cy="79.2" r="1.3" fill="#92400E" opacity=".5"/>
+            <circle cx="51.8" cy="79.2" r="1.3" fill="#92400E" opacity=".5"/>
+            <path d="M41 85 Q50 95 59 85" stroke="#D97706" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+            <path d="M43 86.5 Q50 92 57 86.5" fill="white" opacity=".88"/>
+            <ellipse cx="50" cy="91.5" rx="4" ry="2.5" fill="#FCA5A5" opacity=".75"/>
+            <ellipse cx="26" cy="77" rx="6" ry="4" fill="#FB923C" opacity=".28"/>
+            <ellipse cx="74" cy="77" rx="6" ry="4" fill="#FB923C" opacity=".28"/>
           </g>
         </g>
       </svg>
       <div class="cname" id="cName">🌟 Luna</div>
       <div class="skrow">
         <button class="skb on" id="sk0" onclick="setSkin(0)">🐻</button>
-        <button class="skb" id="sk1" onclick="setSkin(1)">🐱</button>
-        <button class="skb" id="sk2" onclick="setSkin(2)">🐰</button>
-        <button class="skb" id="sk3" onclick="setSkin(3)">🦕</button>
+        <button class="skb"    id="sk1" onclick="setSkin(1)">🐱</button>
+        <button class="skb"    id="sk2" onclick="setSkin(2)">🐰</button>
+        <button class="skb"    id="sk3" onclick="setSkin(3)">🦕</button>
       </div>
     </div>
     <div class="hero-r">
-      <div class="bubble" id="bub" style="animation: 0.3s ease 0s 1 normal none running pIn;">🌈 Hi! I am Luna! Tap anything to start!</div>
+      <div class="bubble" id="bub">
+        🌈 Hi! I am Luna! Tap me or any tile to start learning! You are going to be AMAZING!
+      </div>
     </div>
   </div>
 
   <!-- TABS -->
   <div class="tabs">
-    <button class="tab t0 on" onclick="goTab(&#39;abc&#39;,0)">🔤 A-Z</button>
-    <button class="tab t1" onclick="goTab(&#39;numbers&#39;,1)">🔢 1-2-3</button>
-    <button class="tab t2" onclick="goTab(&#39;songs&#39;,2)">🎵 Songs</button>
-    <button class="tab t3" onclick="goTab(&#39;colors&#39;,3)">🎨 Colors</button>
-    <button class="tab t4" onclick="goTab(&#39;animals&#39;,4)">🐾 Animals</button>
-    <button class="tab t5" onclick="goTab(&#39;shapes&#39;,5)">🔺 Shapes</button>
-    <button class="tab t6" onclick="goTab(&#39;quiz&#39;,6)">🧠 Quiz</button>
-    <button class="tab t7" onclick="goTab(&#39;plan&#39;,7)">📅 30 Days</button>
+    <button class="tab t0 on" onclick="goTab('abc',0)">🔤 A-Z</button>
+    <button class="tab t1"    onclick="goTab('numbers',1)">🔢 1-2-3</button>
+    <button class="tab t2"    onclick="goTab('songs',2)">🎵 Songs</button>
+    <button class="tab t3"    onclick="goTab('colors',3)">🎨 Colors</button>
+    <button class="tab t4"    onclick="goTab('animals',4)">🐾 Animals</button>
+    <button class="tab t5"    onclick="goTab('shapes',5)">🔺 Shapes</button>
+    <button class="tab t6"    onclick="goTab('quiz',6)">🧠 Quiz</button>
+    <button class="tab t7"    onclick="goTab('plan',7)">📅 30 Days</button>
   </div>
 
-  <div class="panel on" id="p-abc"><div class="card"><div class="sech" style="color:var(--p1)">🔤 Learn A to Z!</div><div class="abcg" id="abcG"><div class="lt" style="background: rgb(239, 68, 68);"><div class="lt-L">A</div><div class="lt-e">🍎</div><div class="lt-w">Apple</div></div><div class="lt" style="background: rgb(249, 115, 22);"><div class="lt-L">B</div><div class="lt-e">🦋</div><div class="lt-w">Butterfly</div></div><div class="lt" style="background: rgb(234, 179, 8);"><div class="lt-L">C</div><div class="lt-e">🐱</div><div class="lt-w">Cat</div></div><div class="lt" style="background: rgb(34, 197, 94);"><div class="lt-L">D</div><div class="lt-e">🐶</div><div class="lt-w">Dog</div></div><div class="lt" style="background: rgb(20, 184, 166);"><div class="lt-L">E</div><div class="lt-e">🐘</div><div class="lt-w">Elephant</div></div><div class="lt" style="background: rgb(59, 130, 246);"><div class="lt-L">F</div><div class="lt-e">🐸</div><div class="lt-w">Frog</div></div><div class="lt" style="background: rgb(139, 92, 246);"><div class="lt-L">G</div><div class="lt-e">🍇</div><div class="lt-w">Grapes</div></div><div class="lt" style="background: rgb(236, 72, 153);"><div class="lt-L">H</div><div class="lt-e">🏠</div><div class="lt-w">House</div></div><div class="lt" style="background: rgb(244, 63, 94);"><div class="lt-L">I</div><div class="lt-e">🍦</div><div class="lt-w">Ice Cream</div></div><div class="lt" style="background: rgb(249, 115, 22);"><div class="lt-L">J</div><div class="lt-e">🃏</div><div class="lt-w">Jelly</div></div><div class="lt" style="background: rgb(234, 179, 8);"><div class="lt-L">K</div><div class="lt-e">🪁</div><div class="lt-w">Kite</div></div><div class="lt" style="background: rgb(16, 185, 129);"><div class="lt-L">L</div><div class="lt-e">🦁</div><div class="lt-w">Lion</div></div><div class="lt" style="background: rgb(6, 182, 212);"><div class="lt-L">M</div><div class="lt-e">🌙</div><div class="lt-w">Moon</div></div><div class="lt" style="background: rgb(59, 130, 246);"><div class="lt-L">N</div><div class="lt-e">🥜</div><div class="lt-w">Nuts</div></div><div class="lt" style="background: rgb(124, 58, 237);"><div class="lt-L">O</div><div class="lt-e">🍊</div><div class="lt-w">Orange</div></div><div class="lt" style="background: rgb(219, 39, 119);"><div class="lt-L">P</div><div class="lt-e">🦜</div><div class="lt-w">Parrot</div></div><div class="lt" style="background: rgb(220, 38, 38);"><div class="lt-L">Q</div><div class="lt-e">👸</div><div class="lt-w">Queen</div></div><div class="lt" style="background: rgb(234, 88, 12);"><div class="lt-L">R</div><div class="lt-e">🌈</div><div class="lt-w">Rainbow</div></div><div class="lt" style="background: rgb(202, 138, 4);"><div class="lt-L">S</div><div class="lt-e">⭐</div><div class="lt-w">Star</div></div><div class="lt" style="background: rgb(22, 163, 74);"><div class="lt-L">T</div><div class="lt-e">🌳</div><div class="lt-w">Tree</div></div><div class="lt" style="background: rgb(8, 145, 178);"><div class="lt-L">U</div><div class="lt-e">🌂</div><div class="lt-w">Umbrella</div></div><div class="lt" style="background: rgb(37, 99, 235);"><div class="lt-L">V</div><div class="lt-e">🎻</div><div class="lt-w">Violin</div></div><div class="lt" style="background: rgb(124, 58, 237);"><div class="lt-L">W</div><div class="lt-e">🐋</div><div class="lt-w">Whale</div></div><div class="lt" style="background: rgb(190, 24, 93);"><div class="lt-L">X</div><div class="lt-e">🥁</div><div class="lt-w">Xylophone</div></div><div class="lt" style="background: rgb(180, 83, 9);"><div class="lt-L">Y</div><div class="lt-e">🪀</div><div class="lt-w">Yoyo</div></div><div class="lt" style="background: rgb(55, 65, 81);"><div class="lt-L">Z</div><div class="lt-e">🦓</div><div class="lt-w">Zebra</div></div></div></div></div>
-  <div class="panel" id="p-numbers"><div class="card"><div class="sech" style="color:var(--b1)">🔢 Count with Luna!</div><div class="numg" id="numG"><div class="nt" style="border-color: rgba(239, 68, 68, 0.333);"><div class="nt-n" style="color:#EF4444">1</div><div class="nt-dots"><span class="nd" style="background:#EF4444"></span></div><div class="nt-w" style="color:#EF4444">One</div></div><div class="nt" style="border-color: rgba(249, 115, 22, 0.333);"><div class="nt-n" style="color:#F97316">2</div><div class="nt-dots"><span class="nd" style="background:#F97316"></span><span class="nd" style="background:#F97316"></span></div><div class="nt-w" style="color:#F97316">Two</div></div><div class="nt" style="border-color: rgba(234, 179, 8, 0.333);"><div class="nt-n" style="color:#EAB308">3</div><div class="nt-dots"><span class="nd" style="background:#EAB308"></span><span class="nd" style="background:#EAB308"></span><span class="nd" style="background:#EAB308"></span></div><div class="nt-w" style="color:#EAB308">Three</div></div><div class="nt" style="border-color: rgba(34, 197, 94, 0.333);"><div class="nt-n" style="color:#22C55E">4</div><div class="nt-dots"><span class="nd" style="background:#22C55E"></span><span class="nd" style="background:#22C55E"></span><span class="nd" style="background:#22C55E"></span><span class="nd" style="background:#22C55E"></span></div><div class="nt-w" style="color:#22C55E">Four</div></div><div class="nt" style="border-color: rgba(20, 184, 166, 0.333);"><div class="nt-n" style="color:#14B8A6">5</div><div class="nt-dots"><span class="nd" style="background:#14B8A6"></span><span class="nd" style="background:#14B8A6"></span><span class="nd" style="background:#14B8A6"></span><span class="nd" style="background:#14B8A6"></span><span class="nd" style="background:#14B8A6"></span></div><div class="nt-w" style="color:#14B8A6">Five</div></div><div class="nt" style="border-color: rgba(59, 130, 246, 0.333);"><div class="nt-n" style="color:#3B82F6">6</div><div class="nt-dots"><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span></div><div class="nt-w" style="color:#3B82F6">Six</div></div><div class="nt" style="border-color: rgba(139, 92, 246, 0.333);"><div class="nt-n" style="color:#8B5CF6">7</div><div class="nt-dots"><span class="nd" style="background:#8B5CF6"></span><span class="nd" style="background:#8B5CF6"></span><span class="nd" style="background:#8B5CF6"></span><span class="nd" style="background:#8B5CF6"></span><span class="nd" style="background:#8B5CF6"></span><span class="nd" style="background:#8B5CF6"></span><span class="nd" style="background:#8B5CF6"></span></div><div class="nt-w" style="color:#8B5CF6">Seven</div></div><div class="nt" style="border-color: rgba(236, 72, 153, 0.333);"><div class="nt-n" style="color:#EC4899">8</div><div class="nt-dots"><span class="nd" style="background:#EC4899"></span><span class="nd" style="background:#EC4899"></span><span class="nd" style="background:#EC4899"></span><span class="nd" style="background:#EC4899"></span><span class="nd" style="background:#EC4899"></span><span class="nd" style="background:#EC4899"></span><span class="nd" style="background:#EC4899"></span><span class="nd" style="background:#EC4899"></span></div><div class="nt-w" style="color:#EC4899">Eight</div></div><div class="nt" style="border-color: rgba(244, 63, 94, 0.333);"><div class="nt-n" style="color:#F43F5E">9</div><div class="nt-dots"><span class="nd" style="background:#F43F5E"></span><span class="nd" style="background:#F43F5E"></span><span class="nd" style="background:#F43F5E"></span><span class="nd" style="background:#F43F5E"></span><span class="nd" style="background:#F43F5E"></span><span class="nd" style="background:#F43F5E"></span><span class="nd" style="background:#F43F5E"></span><span class="nd" style="background:#F43F5E"></span><span class="nd" style="background:#F43F5E"></span></div><div class="nt-w" style="color:#F43F5E">Nine</div></div><div class="nt" style="border-color: rgba(16, 185, 129, 0.333);"><div class="nt-n" style="color:#10B981">10</div><div class="nt-dots"><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span><span class="nd" style="background:#10B981"></span></div><div class="nt-w" style="color:#10B981">Ten</div></div><div class="nt" style="border-color: rgba(6, 182, 212, 0.333);"><div class="nt-n" style="color:#06B6D4">11</div><div class="nt-dots"><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span><span class="nd" style="background:#06B6D4"></span></div><div class="nt-w" style="color:#06B6D4">Eleven</div></div><div class="nt" style="border-color: rgba(59, 130, 246, 0.333);"><div class="nt-n" style="color:#3B82F6">12</div><div class="nt-dots"><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span><span class="nd" style="background:#3B82F6"></span></div><div class="nt-w" style="color:#3B82F6">Twelve</div></div></div></div></div>
-  <div class="panel" id="p-songs"><div class="card"><div class="sech" style="color:var(--pk)">🎵 Sing Along!</div><div id="songG"><div class="sg" id="sg0"><div class="sg-ic">🔤</div><div class="sg-in"><div class="sg-nm">ABC Song</div><div class="sg-ds">All 26 letters!</div></div><div class="sg-bt">▶</div></div><div class="sg" id="sg1"><div class="sg-ic">⭐</div><div class="sg-in"><div class="sg-nm">Twinkle Twinkle</div><div class="sg-ds">Classic lullaby</div></div><div class="sg-bt">▶</div></div><div class="sg" id="sg2"><div class="sg-ic">🔢</div><div class="sg-in"><div class="sg-nm">1-2-3 Count</div><div class="sg-ds">Count to 10!</div></div><div class="sg-bt">▶</div></div><div class="sg" id="sg3"><div class="sg-ic">🐄</div><div class="sg-in"><div class="sg-nm">Old MacDonald</div><div class="sg-ds">Farm animal sounds</div></div><div class="sg-bt">▶</div></div><div class="sg" id="sg4"><div class="sg-ic">💃</div><div class="sg-in"><div class="sg-nm">Head Shoulders</div><div class="sg-ds">Move your body!</div></div><div class="sg-bt">▶</div></div><div class="sg" id="sg5"><div class="sg-ic">🌈</div><div class="sg-in"><div class="sg-nm">Rainbow Song</div><div class="sg-ds">All the colors!</div></div><div class="sg-bt">▶</div></div><div class="sg" id="sg6"><div class="sg-ic">🐥</div><div class="sg-in"><div class="sg-nm">Five Little Ducks</div><div class="sg-ds">Count down from 5!</div></div><div class="sg-bt">▶</div></div><div class="sg" id="sg7"><div class="sg-ic">🐑</div><div class="sg-in"><div class="sg-nm">Baa Baa Black Sheep</div><div class="sg-ds">Nursery classic!</div></div><div class="sg-bt">▶</div></div></div><div class="lyrs" id="lyrB"></div></div></div>
-  <div class="panel" id="p-colors"><div class="card"><div class="sech" style="color:var(--or)">🎨 Rainbow Colors!</div><div class="colg" id="colG"><div class="ct" style="background: rgb(239, 68, 68);"><div class="ct-e">🍎</div><div class="ct-n">Red</div></div><div class="ct" style="background: rgb(59, 130, 246);"><div class="ct-e">💧</div><div class="ct-n">Blue</div></div><div class="ct" style="background: rgb(234, 179, 8);"><div class="ct-e">⭐</div><div class="ct-n">Yellow</div></div><div class="ct" style="background: rgb(34, 197, 94);"><div class="ct-e">🌿</div><div class="ct-n">Green</div></div><div class="ct" style="background: rgb(249, 115, 22);"><div class="ct-e">🍊</div><div class="ct-n">Orange</div></div><div class="ct" style="background: rgb(139, 92, 246);"><div class="ct-e">🍇</div><div class="ct-n">Purple</div></div><div class="ct" style="background: rgb(236, 72, 153);"><div class="ct-e">🌸</div><div class="ct-n">Pink</div></div><div class="ct" style="background: rgb(146, 64, 14);"><div class="ct-e">🍫</div><div class="ct-n">Brown</div></div><div class="ct" style="background: rgb(55, 65, 81);"><div class="ct-e">🌑</div><div class="ct-n">Black</div></div><div class="ct" style="background: rgb(156, 163, 175);"><div class="ct-e">⛄</div><div class="ct-n">White</div></div><div class="ct" style="background: rgb(217, 119, 6);"><div class="ct-e">🌟</div><div class="ct-n">Gold</div></div><div class="ct" style="background: rgb(107, 114, 128);"><div class="ct-e">🔮</div><div class="ct-n">Silver</div></div></div></div></div>
-  <div class="panel" id="p-animals"><div class="card"><div class="sech" style="color:var(--g1)">🐾 Amazing Animals!</div><div class="ang" id="anG"><div class="at" style="border-color: rgba(249, 115, 22, 0.333);"><div class="at-e">🦁</div><div class="at-n">Lion</div><div class="at-s">Roar!</div></div><div class="at" style="border-color: rgba(156, 163, 175, 0.333);"><div class="at-e">🐘</div><div class="at-n">Elephant</div><div class="at-s">Trumpet!</div></div><div class="at" style="border-color: rgba(34, 197, 94, 0.333);"><div class="at-e">🐸</div><div class="at-n">Frog</div><div class="at-s">Ribbit!</div></div><div class="at" style="border-color: rgba(59, 130, 246, 0.333);"><div class="at-e">🐧</div><div class="at-n">Penguin</div><div class="at-s">Squawk!</div></div><div class="at" style="border-color: rgba(239, 68, 68, 0.333);"><div class="at-e">🦊</div><div class="at-n">Fox</div><div class="at-s">Yip!</div></div><div class="at" style="border-color: rgba(107, 114, 128, 0.333);"><div class="at-e">🐼</div><div class="at-n">Panda</div><div class="at-s">Squeak!</div></div><div class="at" style="border-color: rgba(236, 72, 153, 0.333);"><div class="at-e">🦜</div><div class="at-n">Parrot</div><div class="at-s">Hello!</div></div><div class="at" style="border-color: rgba(55, 65, 81, 0.333);"><div class="at-e">🦓</div><div class="at-n">Zebra</div><div class="at-s">Bray!</div></div><div class="at" style="border-color: rgba(6, 182, 212, 0.333);"><div class="at-e">🐬</div><div class="at-n">Dolphin</div><div class="at-s">Eeee!</div></div><div class="at" style="border-color: rgba(234, 179, 8, 0.333);"><div class="at-e">🦒</div><div class="at-n">Giraffe</div><div class="at-s">Hmmm!</div></div><div class="at" style="border-color: rgba(107, 114, 128, 0.333);"><div class="at-e">🐺</div><div class="at-n">Wolf</div><div class="at-s">Howl!</div></div><div class="at" style="border-color: rgba(139, 92, 246, 0.333);"><div class="at-e">🦋</div><div class="at-n">Butterfly</div><div class="at-s">Flutter!</div></div><div class="at" style="border-color: rgba(22, 163, 74, 0.333);"><div class="at-e">🐢</div><div class="at-n">Turtle</div><div class="at-s">Shhh!</div></div><div class="at" style="border-color: rgba(124, 58, 237, 0.333);"><div class="at-e">🐙</div><div class="at-n">Octopus</div><div class="at-s">Splash!</div></div><div class="at" style="border-color: rgba(120, 53, 15, 0.333);"><div class="at-e">🦅</div><div class="at-n">Eagle</div><div class="at-s">Screech!</div></div><div class="at" style="border-color: rgba(29, 78, 216, 0.333);"><div class="at-e">🐳</div><div class="at-n">Whale</div><div class="at-s">Whoosh!</div></div><div class="at" style="border-color: rgba(146, 64, 14, 0.333);"><div class="at-e">🦔</div><div class="at-n">Hedgehog</div><div class="at-s">Sniff!</div></div><div class="at" style="border-color: rgba(219, 39, 119, 0.333);"><div class="at-e">🦩</div><div class="at-n">Flamingo</div><div class="at-s">Honk!</div></div><div class="at" style="border-color: rgba(180, 83, 9, 0.333);"><div class="at-e">🐯</div><div class="at-n">Tiger</div><div class="at-s">Growl!</div></div><div class="at" style="border-color: rgba(217, 119, 6, 0.333);"><div class="at-e">🦘</div><div class="at-n">Kangaroo</div><div class="at-s">Boing!</div></div><div class="at" style="border-color: rgba(8, 145, 178, 0.333);"><div class="at-e">🦚</div><div class="at-n">Peacock</div><div class="at-s">Mew!</div></div><div class="at" style="border-color: rgba(156, 163, 175, 0.333);"><div class="at-e">🐨</div><div class="at-n">Koala</div><div class="at-s">Grr!</div></div></div></div></div>
-  <div class="panel" id="p-shapes"><div class="card"><div class="sech" style="color:var(--tl)">🔺 Fun Shapes!</div><div class="shg" id="shG"><div class="sht" style="border-color: rgba(59, 130, 246, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="22" fill="#3B82F6"></circle></svg><div class="sht-n" style="color:#3B82F6">Circle</div><div class="sht-s">No sides</div></div><div class="sht" style="border-color: rgba(239, 68, 68, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="44" height="44" rx="3" fill="#EF4444"></rect></svg><div class="sht-n" style="color:#EF4444">Square</div><div class="sht-s">4 sides</div></div><div class="sht" style="border-color: rgba(234, 179, 8, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><polygon points="25,3 47,47 3,47" fill="#EAB308"></polygon></svg><div class="sht-n" style="color:#EAB308">Triangle</div><div class="sht-s">3 sides</div></div><div class="sht" style="border-color: rgba(34, 197, 94, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="11" width="46" height="28" rx="3" fill="#22C55E"></rect></svg><div class="sht-n" style="color:#22C55E">Rectangle</div><div class="sht-s">4 sides</div></div><div class="sht" style="border-color: rgba(249, 115, 22, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><polygon points="25,2 31,19 49,19 35,30 40,47 25,37 10,47 15,30 1,19 19,19" fill="#F97316"></polygon></svg><div class="sht-n" style="color:#F97316">Star</div><div class="sht-s">5 points</div></div><div class="sht" style="border-color: rgba(139, 92, 246, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><polygon points="25,2 48,25 25,48 2,25" fill="#8B5CF6"></polygon></svg><div class="sht-n" style="color:#8B5CF6">Diamond</div><div class="sht-s">4 sides</div></div><div class="sht" style="border-color: rgba(236, 72, 153, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><path d="M25,44 C5,30 2,18 10,10 C14,6 20,6 25,14 C30,6 36,6 40,10 C48,18 45,30 25,44Z" fill="#EC4899"></path></svg><div class="sht-n" style="color:#EC4899">Heart</div><div class="sht-s">Curved</div></div><div class="sht" style="border-color: rgba(20, 184, 166, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><ellipse cx="25" cy="25" rx="23" ry="16" fill="#14B8A6"></ellipse></svg><div class="sht-n" style="color:#14B8A6">Oval</div><div class="sht-s">No sides</div></div><div class="sht" style="border-color: rgba(245, 158, 11, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><polygon points="25,2 48,19 39,46 11,46 2,19" fill="#F59E0B"></polygon></svg><div class="sht-n" style="color:#F59E0B">Pentagon</div><div class="sht-s">5 sides</div></div><div class="sht" style="border-color: rgba(16, 185, 129, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><polygon points="25,3 46,14 46,36 25,47 4,36 4,14" fill="#10B981"></polygon></svg><div class="sht-n" style="color:#10B981">Hexagon</div><div class="sht-s">6 sides</div></div><div class="sht" style="border-color: rgba(6, 182, 212, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><polygon points="25,2 46,20 35,20 35,48 15,48 15,20 4,20" fill="#06B6D4"></polygon></svg><div class="sht-n" style="color:#06B6D4">Arrow</div><div class="sht-s">Pointed</div></div><div class="sht" style="border-color: rgba(244, 63, 94, 0.333);"><svg viewBox="0 0 50 50" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><path d="M18,2 h14 v16 h16 v14 h-16 v16 h-14 v-16 h-16 v-14 h16Z" fill="#F43F5E"></path></svg><div class="sht-n" style="color:#F43F5E">Cross</div><div class="sht-s">4 arms</div></div></div></div></div>
+  <div class="panel on" id="p-abc"><div class="card"><div class="sech" style="color:var(--p1)">🔤 Learn A to Z!</div><div class="abcg" id="abcG"></div></div></div>
+  <div class="panel" id="p-numbers"><div class="card"><div class="sech" style="color:var(--b1)">🔢 Count with Luna!</div><div class="numg" id="numG"></div></div></div>
+  <div class="panel" id="p-songs"><div class="card"><div class="sech" style="color:var(--pk)">🎵 Sing Along!</div><div id="songG"></div><div class="lyrs" id="lyrB"></div></div></div>
+  <div class="panel" id="p-colors"><div class="card"><div class="sech" style="color:var(--or)">🎨 Rainbow Colors!</div><div class="colg" id="colG"></div></div></div>
+  <div class="panel" id="p-animals"><div class="card"><div class="sech" style="color:var(--g1)">🐾 Amazing Animals!</div><div class="ang" id="anG"></div></div></div>
+  <div class="panel" id="p-shapes"><div class="card"><div class="sech" style="color:var(--tl)">🔺 Fun Shapes!</div><div class="shg" id="shG"></div></div></div>
   <div class="panel" id="p-quiz"><div class="card">
     <div class="sech" style="color:var(--r1)">🧠 Quiz Time!</div>
-    <div class="qhud"><div class="qprog" id="qPr">Q 1 / 20</div><div class="qpts" id="qPt">⭐ 0 pts</div></div>
+    <div class="qhud"><div class="qprog" id="qPr">Q 1/20</div><div class="qpts" id="qPt">0 pts</div></div>
     <div class="qbar"><div class="qbarf" id="qBF" style="width:0%"></div></div>
-    <div class="qq" id="qQ">What letter comes after M?</div>
-    <div class="qopts" id="qO"><div class="qo">L</div><div class="qo">N</div><div class="qo">O</div><div class="qo">P</div></div>
-    <button class="qnext" id="qN" onclick="nextQ()" style="display: none;">Next</button>
+    <div class="qq" id="qQ">Ready?</div>
+    <div class="qopts" id="qO"></div>
+    <button class="qnext" id="qN" onclick="nextQ()">Next</button>
   </div></div>
   <div class="panel" id="p-plan"><div class="card">
     <div class="sech" style="color:var(--p1)">📅 30-Day Journey!</div>
-    <div class="wkrow" id="wkR"><div class="wk on">Week 1</div><div class="wk">Week 2</div><div class="wk">Week 3</div><div class="wk">Week 4</div></div>
-    <div class="dayg" id="dayG"><div class="dy today"><div class="dy-n">1</div><div class="dy-i">🔤</div><div class="dy-t">Letters A to E</div></div><div class="dy locked"><div class="dy-n">2</div><div class="dy-i">🔢</div><div class="dy-t">Numbers 1 to 3</div></div><div class="dy locked"><div class="dy-n">3</div><div class="dy-i">🎨</div><div class="dy-t">Red and Blue</div></div><div class="dy locked"><div class="dy-n">4</div><div class="dy-i">🐾</div><div class="dy-t">Farm Animals</div></div><div class="dy locked"><div class="dy-n">5</div><div class="dy-i">🔺</div><div class="dy-t">Circle and Square</div></div><div class="dy locked"><div class="dy-n">6</div><div class="dy-i">🎵</div><div class="dy-t">ABC Song</div></div><div class="dy locked"><div class="dy-n">7</div><div class="dy-i">🌟</div><div class="dy-t">Week 1 Review</div></div></div>
-    <div class="lesson" id="lesC" style="display: none;"></div>
+    <div class="wkrow" id="wkR"></div>
+    <div class="dayg" id="dayG"></div>
+    <div class="lesson" id="lesC"></div>
   </div></div>
 </div>
 
@@ -441,7 +448,7 @@ body{font-family:'Baloo 2',cursive;color:var(--txt);}
   <div class="bot-in">
     <div class="bst">⭐<span id="bStar">0</span></div>
     <div class="btr"><div class="bfi" id="bFil" style="width:0%"></div></div>
-    <div class="blv" id="bLvl">🌱 Starter</div>
+    <div class="blv" id="bLvl">Starter 🌱</div>
   </div>
 </div>
 
@@ -988,6 +995,5 @@ window.addEventListener('load',()=>{
 });
 document.addEventListener('visibilitychange',()=>{ if(document.hidden) stopVoice(); });
 </script>
-
-
-</body></html>
+</body>
+</html>
